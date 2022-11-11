@@ -8,26 +8,30 @@ node {
 	
     stage('clean') {
 	
-	bat 'mvn clean'
+	sh 'mvn clean'
         
     }
     
     stage('validate') {
 	
-	bat 'mvn validate'
+	sh 'mvn validate'
         
     }
     stage('compile') {
-    bat 'mvn compile'  
+    
+	sh 'mvn compile'  
     }
 	stage('test') {
-    bat 'mvn test'  
+    
+	sh 'mvn test'  
     }
 	stage('package') {
-    bat 'mvn package'  
+    
+	sh 'mvn package'  
     }
 	stage('deploy') {
-    bat 'mvn deploy'  
+    
+	sh 'mvn deploy'  
     }
 	
 }
