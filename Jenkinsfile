@@ -29,7 +29,7 @@ node {
     
 	sh 'mvn package'  
     }
-	stage('maven deployment') {
+	stage('deployment') {
     
 	sh 'mvn deploy'  
     }
