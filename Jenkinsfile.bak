@@ -4,7 +4,7 @@ pipeline {
     tools {
         maven 'maven-3.8.6'
     }
-
+    stages {
     stage('git clone') {
 	    steps {
 	
@@ -43,5 +43,5 @@ pipeline {
 	sh 'mvn deploy'  
     }
 	}
-	
+}	
 }

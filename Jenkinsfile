@@ -13,23 +13,23 @@ pipeline {
     }
 	}
 	stage('maven clean') {
-	    stpes {         
+	    steps {         
 	sh 'mvn clean'
     }    
     }
     
     stage('maven validate') {
-	    stpes {
+	    steps  {
 	sh 'mvn validate'
     }    
     }
     stage('maven compile') {
-        stpes {
+        steps  {
 	sh 'mvn compile'  
     }
 	}
 	stage('maven test') {
-        stpes {
+        steps  {
 	sh 'mvn test'  
     }
 	}
@@ -39,7 +39,7 @@ pipeline {
     }
 	}
 	stage('maven deployment') {
-        stpes {
+        steps  {
 	sh 'mvn deploy'  
     }
 	}
