@@ -12,7 +12,7 @@ pipeline {
     }
 	
    
-    stage('clean') {
+    stage('maven clean') {
 	
 	sh 'mvn clean'
         
@@ -22,24 +22,24 @@ pipeline {
 	sh 'mvn sonar:sonar -Dsonar.host.url=http://3.110.27.218:9000 -Dsonar.login=cd8cc4cede48068dea8cf2f74cf9965d2d1439e0'
         
     }
-    stage('validate') {
+    stage('maven validate') {
 	
 	sh 'mvn validate'
         
     }
-    stage('compile') {
+    stage('maven compile') {
     
 	sh 'mvn compile'  
     }
-	stage('test') {
+	stage('maven test') {
     
 	sh 'mvn test'  
     }
-	stage('package') {
+	stage('maven package') {
     
 	sh 'mvn package'  
     }
-	stage('deployment') {
+	stage('maven deployment') {
     
 	sh 'mvn deploy'  
     }
